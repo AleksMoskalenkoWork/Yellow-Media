@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run --spec 'cypress/e2e/sinoptic.cy.js' --no-runner-ui"
+  },
+  "devDependencies": {
+    "cypress": "^13.16.1"
+  },
+  "dependencies": {
+    "cypress-fail-fast": "^7.1.1"
+  }
+}

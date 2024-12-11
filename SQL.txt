@@ -1,0 +1,21 @@
+SQL
+
+1. Є таблиця people
+колонки id, first_name, last_name, gender, day, month, year вивести всю інформацію про людей в яких first_name починається на J.
+
+Відповідь
+SELECT * 
+FROM people
+WHERE first_name LIKE 'J%';
+
+2. Вивести стать та кількість людей цієї статті, які народились влітку після 2000 року
+
+Відповідь
+SELECT gender, COUNT(*) AS people_count
+FROM people
+WHERE year > 2000
+  AND month IN (6, 7, 8) 
+
+3. Є таблиця cards 
+колонки id, people_id, number пов'язана з таблицею people по id людини.
+Вивести імена людей в алфавітному порядку (спочатку по прізвищу, потім по імені) та їхній номер картки (у однієї людини може бути декілька карток)
